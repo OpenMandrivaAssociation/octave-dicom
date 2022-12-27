@@ -2,7 +2,7 @@
 
 Summary:	Digital communications in medicine (DICOM) file io
 Name:		octave-%{octpkg}
-Version:	0.5.0
+Version:	0.5.1
 Release:	1
 Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
