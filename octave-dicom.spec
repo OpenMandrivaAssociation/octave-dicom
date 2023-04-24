@@ -1,33 +1,33 @@
 %global octpkg dicom
 
-Summary:	Digital communications in medicine (DICOM) file io
-Name:		octave-%{octpkg}
+Summary:	Digital communications in medicine (DICOM) file io for Octave
+Name:		octave-dicom
 Version:	0.5.1
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
+Url:		https://packages.octave.org/dicom/
+Source0:	https://downloads.sourceforge.net/octave/dicom-%{version}.tar.gz
 
-BuildRequires:	octave-devel > 3.8.0
-BuildRequires:	gdcm-devel
+BuildRequires:  octave-devel >= 3.8.0
+BuildRequires:  gdcm-devel
 
 Requires:	octave(api) = %{octave_api}
-Requires:	gdcm-devel
 
 Requires(post): octave
 Requires(postun): octave
 
 %description
-Digital communications in medicine (DICOM) file io. 
+File io for medical images and other data using Grassroots DICOM
+(GDCM) library.
 
 %files
 %license COPYING
 %doc NEWS
-%dir %{octpkglibdir}
-%{octpkglibdir}/*
 %dir %{octpkgdir}
 %{octpkgdir}/*
+%dir %{octpkglibdir}
+%{octpkglibdir}/*
 %{_metainfodir}/*.metainfo.xml
 
 #---------------------------------------------------------------------------
@@ -35,11 +35,7 @@ Digital communications in medicine (DICOM) file io.
 %prep
 %autosetup -p1 -n %{octpkg}-%{version}
 
-# remove backup files
-#find . -name \*~ -delete
-
 %build
-export CXXFLAGS="%{optflags} -I%{_includedir}/gdcm"
 %set_build_flags
 %octave_pkg_build
 
