@@ -2,8 +2,8 @@
 
 Summary:	Digital communications in medicine (DICOM) file io for Octave
 Name:		octave-dicom
-Version:	0.5.1
-Release:	2
+Version:	0.6.0
+Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/dicom/
