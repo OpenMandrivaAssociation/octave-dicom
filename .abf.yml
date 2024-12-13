@@ -1,3 +1,3 @@
 sources:
-  dicom-0.6.0.tar.gz: 3bf0f73c49c3ecb5e24407de4e5a2d3ba49adadc
+  dicom-0.6.1.tar.gz: 496db527e3a92078781e09c4cdb58bf6d70ff984
   files-before-rpm: 0d2aa799300a24c673689f53380ffc034f31df9f
